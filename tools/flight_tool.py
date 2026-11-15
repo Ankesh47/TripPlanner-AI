@@ -14,8 +14,8 @@ os.environ["REQUESTS_CA_BUNDLE"] = certifi.where()
 API_KEY = os.getenv("AVIATIONSTACK_API_KEY")
 
 # Default origin when user says only destination, e.g. "Japan trip"
-# Change this if your default location is not Bangladesh/Dhaka.
-DEFAULT_ORIGIN_IATA = os.getenv("DEFAULT_ORIGIN_IATA", "DAC")
+# Default departure airport: Kolkata (CCU) for travelers from Jamshedpur / Eastern India
+DEFAULT_ORIGIN_IATA = os.getenv("DEFAULT_ORIGIN_IATA", "CCU")
 
 
 BASE_URL = "https://api.aviationstack.com/v1/flights"
@@ -92,6 +92,9 @@ COUNTRY_MAIN_AIRPORT = {
 
 
 CITY_MAIN_AIRPORT = {
+    "kolkata": "CCU",
+    "calcutta": "CCU",
+    "jamshedpur": "CCU",
     "dhaka": "DAC",
     "delhi": "DEL",
     "new delhi": "DEL",
@@ -536,6 +539,6 @@ def search_flights(query: str, limit: int = 10):
 
 
 if __name__ == "__main__":
-    print(search_flights("Plan a 7 days Japan trip from Bangladesh"))
+    print(search_flights("Plan a 7 days Japan trip from Kolkata"))
     print("\n" + "=" * 80 + "\n")
     print(search_flights("all country flight info"))

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TripMate AI</title>
+    <title>TripPlanner-AI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
         <div class="nav-inner">
             <a href="/" class="nav-logo">
                 <span class="logo-icon">✈</span>
-                <span>TripMate AI</span>
+                <span>TripPlanner-AI</span>
             </a>
             <div class="nav-links">
                 <div class="status-indicator">
@@ -43,21 +43,24 @@
         <section class="card input-card">
             <label class="input-label" for="userInput">Describe your trip</label>
             <textarea id="userInput" rows="4"
-                placeholder="e.g. Plan a 7-day Japan trip from Bangladesh including flights, hotels, and sightseeing under 2 lakhs"></textarea>
+                placeholder="e.g. Plan a 7 days Japan trip departing from Kolkata (CCU) including flights, hotels, and sightseeing under 2 lakhs (residing in Jamshedpur)"></textarea>
 
             <div class="input-footer">
                 <div class="quick-chips">
-                    <button onclick="setPrompt('Plan a complete 7 days Japan trip from Bangladesh including flights, hotels and sightseeing under 2 lakhs.')">
-                        🇯🇵 Japan
+                    <button onclick="setPrompt('Plan a complete 7 days Japan trip departing from Kolkata (CCU) including flights, hotels, and sightseeing under 2 lakhs.')">
+                        🇯🇵 Japan (from Kolkata)
                     </button>
-                    <button onclick="setPrompt('Plan a 5 days Dubai trip from Dhaka with flights, hotels and sightseeing.')">
-                        🇦🇪 Dubai
+                    <button onclick="setPrompt('Plan a 5 days Dubai trip departing from Kolkata (CCU) with flights, hotels, and sightseeing.')">
+                        🇦🇪 Dubai (from Kolkata)
                     </button>
-                    <button onclick="setPrompt('Plan a 7 days Thailand trip from Bangladesh with budget hotels and sightseeing.')">
-                        🇹🇭 Thailand
+                    <button onclick="setPrompt('Plan a 7 days Thailand trip from Kolkata with budget hotels and sightseeing.')">
+                        🇹🇭 Thailand (from Kolkata)
                     </button>
-                    <button onclick="setPrompt('Give me all country flight info.')">
-                        🌍 Global
+                    <button onclick="setPrompt('Plan a 4 days Goa trip departing from Kolkata with flights and beachside stays.')">
+                        🏝️ Goa (from Kolkata)
+                    </button>
+                    <button onclick="setPrompt('Give me live international flights departing from Kolkata (CCU).')">
+                        🌍 Kolkata Flights
                     </button>
                 </div>
                 <button id="sendBtn" class="btn-primary" onclick="sendMessage()">
